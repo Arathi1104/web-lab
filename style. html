@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Applying Inline, Internal & External Styles</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <style>
+    ul {
+      color: green;
+      font-size: 18px;
+      list-style-type: square;
+    }
+
+    ol {
+      color: brown;
+      font-size: 18px;
+      list-style-type: upper-roman;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Famous Tourist Places in Kerala</h1>
+
+  
+  <p style="color:navy;font-size:20px;"><b>Hill Stations:</b></p>
+  <ul>
+    <li>Munnar</li>
+    <li>Wayanad</li>
+    <li>Thekkady</li>
+  </ul>
+
+  <p style="color:navy;font-size:20px;"><b>Backwater Destinations:</b></p>
+  <ol>
+    <li>Kumarakom</li>
+    <li>Kollam</li>
+  </ol>
+</body>
+</html>
