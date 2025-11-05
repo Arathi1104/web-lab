@@ -16,9 +16,59 @@
       font-size: 18px;
       list-style-type: upper-roman;
     }
-  </style>
+table {
+ border-collapse: collapse;
+ width: 30%;
+ }
+ th, td {
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: left;
+ }
+ th {
+ background-color: purple;
+ color: white;
+ }
+ tr:nth-child(even) {
+ background-color: #f2f2f2;
+ }
+ tr:hover {
+ background-color: #ddd;
+ }
+</style>
 </head>
-
+<body>
+<table>
+ <thead>
+ <tr>
+ <th>RegNo</th>
+ <th>Name</th>
+ <th>Marks</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1234</td>
+ <td>Nia</td>
+ <td>98</td>
+ </tr>
+ <tr>
+ <td>4343</td>
+ <td>Lee</td>
+ <td>95</td>
+ </tr>
+ <tr>
+ <td>3663</td>
+<td>Zia</td>
+ <td>88</td>
+ </tr>
+ <tr>
+ <td>1122</td>
+ <td>Ria</td>
+ <td>78</td>
+ </tr>
+ </tbody>
+</table>
 <body>
   <h1>Famous Tourist Places in Kerala</h1>
 
