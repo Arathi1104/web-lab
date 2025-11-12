@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<title>Simple Form</title>
+<style>
+form {
+    text-align: left;
+    margin-left: 50px;
+}
+</style>
+</head>
+<body>
+
+<h3><center>FORM</center></h3>
+
+<form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Password: <input type="password" id="password"><br><br>
+    Mobile No: <input type="text" id="mobile" maxlength="10"><br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+</form>
+
+<script>
+function validateForm() {
+    var name = document.getElementById("name").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var mobile = document.getElementById("mobile").value.trim();
+
+    // Name validation (letters and spaces only)
+    for (var i = 0; i < name.length; i++) {
+        var ch = name.charAt(i);
+        if (!((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || ch == ' ')) {
+            alert("Name should contain only letters and spaces.");
+            return false;
+        }
+    }
+
+    // Password validation (maximum 8 characters)
+    if (password.length === 0 || password.length > 8) {
+        alert("Password must be up to 8 characters long.");
+        return false;
+    }
+
+    // Mobile number validation (10 digits, only numbers)
+    if (mobile.length !== 10) {
+        alert("Mobile number must be exactly 10 digits.");
+        return false;
+    }
+
+    for (var i = 0; i < mobile.length; i++) {
+        var ch = mobile.charAt(i);
+        if (ch < '0' || ch > '9') {
+            alert("Mobile number should contain only digits.");
+            return false;
+        }
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>
