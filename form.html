@@ -1,64 +1,48 @@
-<!DOCTYPE html>
 <html>
+<title>form</title>
 <head>
-<title>Simple Form</title>
 <style>
-form {
-    text-align: left;
-    margin-left: 50px;
-}
+
+
 </style>
 </head>
+
 <body>
-
-<h3><center>FORM</center></h3>
-
-<form onsubmit="return validateForm()">
-    Name: <input type="text" id="name"><br><br>
-    Password: <input type="password" id="password"><br><br>
-    Mobile No: <input type="text" id="mobile" maxlength="10"><br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Cancel">
+<h3>REGISTRATION FORM</h3>
+<form>
+<label>Name:
+<input type="text"></label><br><br>
+<label>Password:
+<input type="password"></label><br><br>
+<label>Address:<br>
+<textarea name="address" rows="4" cols="40"></textarea><br><br>
+<label>Email:
+<input type="text" placeholder="abc@gmail.com"></label><br><br>
+<label>Mobile No:
+<input type="digits" maxlength="10"></label><br><br>
+<label>DOB:
+<input type="date" name="dateofbirth"></label><br><br>
+<label>Gender:
+<input type="radio" name="gender" value="female">female</label>
+<input type="radio" name="gender" value="male">male</label>
+<input type="radio" name="gender" value="others">others</label><br><br>
+<label>Nationality:
+<select value="select">
+<option>India</option>
+<option>America</option>
+<option>china</option>
+</label></select><br><br>
+<fieldset><legend>
+<label>Languages known:</legend>
+<input type="checkbox" name="English">
+<label>English</label><br>
+<input type="checkbox" name="Hindi">
+<label>Hindi</label><br>
+<input type="checkbox" name="Malayalam">
+<label>Malayalam</label><br>
+</label></fieldset><br><br>
+<input type="submit" value="submit">
+<input type="submit" value="cancel">
 </form>
-
-<script>
-function validateForm() {
-    var name = document.getElementById("name").value.trim();
-    var password = document.getElementById("password").value.trim();
-    var mobile = document.getElementById("mobile").value.trim();
-
-    // Name validation: only letters
-    for (var i = 0; i < name.length; i++) {
-        var ch = name.charAt(i);
-        if (!((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || ch == ' ')) {
-            alert("Name should contain only letters.");
-            return false;
-        }
-    }
-
-    // Password validation: up to 8 characters
-    if (password.length == 0 || password.length > 8) {
-        alert("Password must be up to 8 characters.");
-        return false;
-    }
-
-    // Mobile validation: only digits allowed
-    if (mobile.length != 10) {
-        alert("Mobile number must be exactly 10 digits.");
-        return false;
-    }
-    for (var i = 0; i < mobile.length; i++) {
-        var ch = mobile.charAt(i);
-        if (ch < '0' || ch > '9') {
-            alert("Mobile number should contain only digits (no letters or symbols).");
-            return false;
-        }
-    }
-
-    alert("Form submitted successfully!");
-    return true;
-}
-</script>
-
 </body>
 </html>
