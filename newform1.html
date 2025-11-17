@@ -1,0 +1,114 @@
+
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:#CD2C58;
+        margin-top: 30px;
+    }
+
+    form {
+        background: #FFC4C4;
+        padding: 25px 35px;
+        width: 800px;
+    }
+
+    h2 {
+        text-align:center;
+        color: #4a148c;
+	text-decoration-line: underline;
+ 	text-decoration-style: double;
+    }
+
+    
+    label {
+        display: inline-block;
+        width: 150px;
+        
+    }
+
+    input[type="text"], input[type="password"], input[type="digits"], 
+    input[type="date"], textarea, select {
+        width: 300px;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    fieldset {
+        border: 1px solid #999;
+        padding: 10px;
+        width: 480px;
+    }
+
+    input[type="submit"] {
+        padding: 8px 20px;
+        border: none;
+        background-color: #1976d2;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px;
+	text-align: center;
+    }
+
+
+    input[type="submit"]:hover {
+        background-color: #6a1b9a;
+    }
+</style>
+</head>
+
+<body>
+<form>
+<h2>REGISTRATION FORM</h2>
+
+<label>Name:</label>
+<input type="text"><br><br>
+
+<label>Password:</label>
+<input type="password"><br><br>
+
+<label>Address:</label>
+<textarea name="address" rows="4" cols="40"></textarea><br><br>
+
+<label>Email:</label>
+<input type="text" placeholder="abc@gmail.com"><br><br>
+
+<label>Mobile No:</label>
+<input type="digits" maxlength="10"><br><br>
+
+<label>DOB:</label>
+<input type="date" name="dateofbirth"><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="others"> Others<br><br>
+
+<label>Nationality:</label>
+<select>
+    <option>India</option>
+    <option>America</option>
+    <option>China</option>
+</select><br><br>
+
+<fieldset>
+<legend>Languages Known</legend>
+<input type="checkbox" name="English"> English<br>
+<input type="checkbox" name="Hindi"> Hindi<br>
+<input type="checkbox" name="Malayalam"> Malayalam<br>
+</fieldset><br>
+
+
+<input type="submit" value="Submit">
+<input type="submit" value="Cancel">
+
+</form>
+</body>
+</html>
